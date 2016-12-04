@@ -37,5 +37,14 @@ public class CourseDaoImpl implements CourseDao {
     {
         return entityManager.merge( course );
     }
+    
+    /*@Override
+    public List<String> searchJobNoFTS(String term) {
+    	String query = "select j.jobTitle from JobPosting j where upper(j.jobTitle) like ?1";
+    	return em
+    			.createQuery(query, String.class)
+    			.setParameter(1, "%" + term.toUpperCase() + "%")
+    			.getResultList();
+    }*/
 
 }
